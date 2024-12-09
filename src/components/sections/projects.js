@@ -7,6 +7,7 @@ import sr from '@utils/sr';
 import { Icon } from '@components/icons';
 import { usePrefersReducedMotion } from '@hooks';
 
+// Estilos para la sección de proyectos
 const StyledProjectsSection = styled.section`
   display: flex;
   flex-direction: column;
@@ -43,6 +44,7 @@ const StyledProjectsSection = styled.section`
   }
 `;
 
+// Estilos para cada proyecto individual
 const StyledProject = styled.li`
   position: relative;
   cursor: default;
@@ -165,7 +167,9 @@ const StyledProject = styled.li`
   }
 `;
 
+// Componente de Proyectos
 const Projects = () => {
+  // Consulta GraphQL para obtener datos de los proyectos
   const data = useStaticQuery(graphql`
     query {
       projects: allMarkdownRemark(
@@ -190,12 +194,14 @@ const Projects = () => {
     }
   `);
 
+  // Estado para mostrar más proyectos
   const [showMore, setShowMore] = useState(false);
   const revealTitle = useRef(null);
   const revealArchiveLink = useRef(null);
   const revealProjects = useRef([]);
   const prefersReducedMotion = usePrefersReducedMotion();
 
+  // Efecto para revelar elementos con animación
   useEffect(() => {
     if (prefersReducedMotion) {
       return;
@@ -206,11 +212,13 @@ const Projects = () => {
     revealProjects.current.forEach((ref, i) => sr.reveal(ref, srConfig(i * 100)));
   }, []);
 
+  // Límite de proyectos a mostrar en la cuadrícula
   const GRID_LIMIT = 6;
   const projects = data.projects.edges.filter(({ node }) => node);
   const firstSix = projects.slice(0, GRID_LIMIT);
   const projectsToShow = showMore ? projects : firstSix;
 
+  // Función para renderizar el contenido interno de cada proyecto
   const projectInner = node => {
     const { frontmatter, html } = node;
     const { github, external, title, tech } = frontmatter;
@@ -265,10 +273,10 @@ const Projects = () => {
 
   return (
     <StyledProjectsSection>
-      <h2 ref={revealTitle}>Other Noteworthy Projects</h2>
+      <h2 ref={revealTitle}>Colaboraciones con terceros y otros proyectos relevantes</h2>
 
       <Link className="inline-link archive-link" to="/archive" ref={revealArchiveLink}>
-        view the archive
+        Revisa el historial
       </Link>
 
       <ul className="projects-grid">

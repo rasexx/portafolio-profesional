@@ -6,15 +6,20 @@ import { Helmet } from 'react-helmet';
 import styled from 'styled-components';
 import { Layout } from '@components';
 
+// Estilos para el contenedor principal del post
 const StyledPostContainer = styled.main`
   max-width: 1000px;
 `;
+
+// Estilos para el encabezado del post
 const StyledPostHeader = styled.header`
   margin-bottom: 50px;
   .tag {
     margin-right: 10px;
   }
 `;
+
+// Estilos para el contenido del post
 const StyledPostContent = styled.div`
   margin-bottom: 100px;
   h1,
@@ -50,6 +55,7 @@ const StyledPostContent = styled.div`
   }
 `;
 
+// Componente principal del template del post
 const PostTemplate = ({ data, location }) => {
   const { frontmatter, html } = data.markdownRemark;
   const { title, date, tags } = frontmatter;
@@ -93,11 +99,13 @@ const PostTemplate = ({ data, location }) => {
 
 export default PostTemplate;
 
+// Definición de tipos de propiedades para el componente
 PostTemplate.propTypes = {
   data: PropTypes.object,
   location: PropTypes.object,
 };
 
+// Consulta GraphQL para obtener los datos del post
 export const pageQuery = graphql`
   query($path: String!) {
     markdownRemark(frontmatter: { slug: { eq: $path } }) {

@@ -7,6 +7,7 @@ import { srConfig } from '@config';
 import { Icon } from '@components/icons';
 import { usePrefersReducedMotion } from '@hooks';
 
+// Estilos para la cuadrícula de proyectos
 const StyledProjectsGrid = styled.ul`
   ${({ theme }) => theme.mixins.resetList};
 
@@ -16,6 +17,7 @@ const StyledProjectsGrid = styled.ul`
   }
 `;
 
+// Estilos para cada proyecto individual
 const StyledProject = styled.li`
   position: relative;
   display: grid;
@@ -303,7 +305,9 @@ const StyledProject = styled.li`
   }
 `;
 
+// Componente de Proyectos Destacados
 const Featured = () => {
+  // Consulta GraphQL para obtener datos de los proyectos destacados
   const data = useStaticQuery(graphql`
     {
       featured: allMarkdownRemark(
@@ -336,6 +340,7 @@ const Featured = () => {
   const revealProjects = useRef([]);
   const prefersReducedMotion = usePrefersReducedMotion();
 
+  // Efecto para revelar elementos con animación
   useEffect(() => {
     if (prefersReducedMotion) {
       return;
@@ -348,7 +353,7 @@ const Featured = () => {
   return (
     <section id="projects">
       <h2 className="numbered-heading" ref={revealTitle}>
-        Some Things I’ve Built
+        Proyectos elaborados
       </h2>
 
       <StyledProjectsGrid>

@@ -7,6 +7,7 @@ import { KEY_CODES } from '@utils';
 import sr from '@utils/sr';
 import { usePrefersReducedMotion } from '@hooks';
 
+// Estilos para la sección de trabajos
 const StyledJobsSection = styled.section`
   max-width: 700px;
 
@@ -17,13 +18,14 @@ const StyledJobsSection = styled.section`
       display: block;
     }
 
-    // Prevent container from jumping
+    // Prevenir que el contenedor salte
     @media (min-width: 700px) {
       min-height: 340px;
     }
   }
 `;
 
+// Estilos para la lista de pestañas
 const StyledTabList = styled.div`
   position: relative;
   z-index: 3;
@@ -66,6 +68,7 @@ const StyledTabList = styled.div`
   }
 `;
 
+// Estilos para el botón de pestaña
 const StyledTabButton = styled.button`
   ${({ theme }) => theme.mixins.link};
   display: flex;
@@ -99,6 +102,7 @@ const StyledTabButton = styled.button`
   }
 `;
 
+// Estilos para el resaltado de la pestaña activa
 const StyledHighlight = styled.div`
   position: absolute;
   top: 0;
@@ -126,6 +130,7 @@ const StyledHighlight = styled.div`
   }
 `;
 
+// Estilos para los paneles de pestañas
 const StyledTabPanels = styled.div`
   position: relative;
   width: 100%;
@@ -136,6 +141,7 @@ const StyledTabPanels = styled.div`
   }
 `;
 
+// Estilos para cada panel de pestaña
 const StyledTabPanel = styled.div`
   width: 100%;
   height: auto;
@@ -164,7 +170,9 @@ const StyledTabPanel = styled.div`
   }
 `;
 
+// Componente de Trabajos
 const Jobs = () => {
+  // Consulta GraphQL para obtener datos de los trabajos
   const data = useStaticQuery(graphql`
     query {
       jobs: allMarkdownRemark(
@@ -189,12 +197,14 @@ const Jobs = () => {
 
   const jobsData = data.jobs.edges;
 
+  // Estado para la pestaña activa y el foco de la pestaña
   const [activeTabId, setActiveTabId] = useState(0);
   const [tabFocus, setTabFocus] = useState(null);
   const tabs = useRef([]);
   const revealContainer = useRef(null);
   const prefersReducedMotion = usePrefersReducedMotion();
 
+  // Efecto para revelar el contenedor con animación
   useEffect(() => {
     if (prefersReducedMotion) {
       return;
@@ -203,25 +213,26 @@ const Jobs = () => {
     sr.reveal(revealContainer.current, srConfig());
   }, []);
 
+  // Función para enfocar la pestaña
   const focusTab = () => {
     if (tabs.current[tabFocus]) {
       tabs.current[tabFocus].focus();
       return;
     }
-    // If we're at the end, go to the start
+    // Si estamos al final, ir al inicio
     if (tabFocus >= tabs.current.length) {
       setTabFocus(0);
     }
-    // If we're at the start, move to the end
+    // Si estamos al inicio, mover al final
     if (tabFocus < 0) {
       setTabFocus(tabs.current.length - 1);
     }
   };
 
-  // Only re-run the effect if tabFocus changes
+  // Solo volver a ejecutar el efecto si tabFocus cambia
   useEffect(() => focusTab(), [tabFocus]);
 
-  // Focus on tabs when using up & down arrow keys
+  // Enfocar en las pestañas cuando se usan las teclas de flecha arriba y abajo
   const onKeyDown = e => {
     switch (e.key) {
       case KEY_CODES.ARROW_UP: {
@@ -244,7 +255,7 @@ const Jobs = () => {
 
   return (
     <StyledJobsSection id="jobs" ref={revealContainer}>
-      <h2 className="numbered-heading">Where I’ve Worked</h2>
+      <h2 className="numbered-heading">Mis experiencias laborales</h2>
 
       <div className="inner">
         <StyledTabList role="tablist" aria-label="Job tabs" onKeyDown={e => onKeyDown(e)}>

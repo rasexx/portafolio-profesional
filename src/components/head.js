@@ -4,8 +4,10 @@ import { Helmet } from 'react-helmet';
 import { useLocation } from '@reach/router';
 import { useStaticQuery, graphql } from 'gatsby';
 
-// https://www.gatsbyjs.com/docs/add-seo-component/
+// Componente Head para SEO
 
+// Obtener la ubicación actual
+// Consulta estática para obtener metadatos del sitio
 const Head = ({ title, description, image }) => {
   const { pathname } = useLocation();
 
@@ -25,6 +27,7 @@ const Head = ({ title, description, image }) => {
     `,
   );
 
+  // Desestructuración de los metadatos del sitio
   const {
     defaultTitle,
     defaultDescription,
@@ -33,6 +36,7 @@ const Head = ({ title, description, image }) => {
     twitterUsername,
   } = site.siteMetadata;
 
+  // Configuración de SEO
   const seo = {
     title: title || defaultTitle,
     description: description || defaultDescription,
@@ -40,6 +44,7 @@ const Head = ({ title, description, image }) => {
     url: `${siteUrl}${pathname}`,
   };
 
+  // Renderizado de etiquetas meta para SEO
   return (
     <Helmet title={title} defaultTitle={seo.title} titleTemplate={`%s | ${defaultTitle}`}>
       <html lang="en" />
@@ -66,12 +71,14 @@ const Head = ({ title, description, image }) => {
 
 export default Head;
 
+// Definición de tipos de propiedades
 Head.propTypes = {
   title: PropTypes.string,
   description: PropTypes.string,
   image: PropTypes.string,
 };
 
+// Valores por defecto de las propiedades
 Head.defaultProps = {
   title: null,
   description: null,

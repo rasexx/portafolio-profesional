@@ -1,3 +1,4 @@
+// Importaciones necesarias
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
@@ -5,6 +6,7 @@ import { socialMedia } from '@config';
 import { Side } from '@components';
 import { Icon } from '@components/icons';
 
+// ESTILO: Lista de redes sociales
 const StyledSocialList = styled.ul`
   display: flex;
   flex-direction: column;
@@ -13,6 +15,7 @@ const StyledSocialList = styled.ul`
   padding: 0;
   list-style: none;
 
+  // ESTILO: Línea vertical después de la lista
   &:after {
     content: '';
     display: block;
@@ -22,19 +25,23 @@ const StyledSocialList = styled.ul`
     background-color: var(--light-slate);
   }
 
+  // ESTILO: Elementos de la lista
   li {
     &:last-of-type {
       margin-bottom: 20px;
     }
 
+    // ESTILO: Enlaces de redes sociales
     a {
       padding: 10px;
 
+      // ESTILO: Efecto hover en los enlaces
       &:hover,
       &:focus {
         transform: translateY(-3px);
       }
 
+      // ESTILO: Iconos de redes sociales
       svg {
         width: 20px;
         height: 20px;
@@ -43,6 +50,7 @@ const StyledSocialList = styled.ul`
   }
 `;
 
+// COMPONENTE: Social
 const Social = ({ isHome }) => (
   <Side isHome={isHome} orientation="left">
     <StyledSocialList>
@@ -58,8 +66,10 @@ const Social = ({ isHome }) => (
   </Side>
 );
 
+// PROP TYPES: Validación de propiedades
 Social.propTypes = {
   isHome: PropTypes.bool,
 };
 
+// Exportación del componente
 export default Social;

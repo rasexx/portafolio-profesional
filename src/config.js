@@ -1,54 +1,67 @@
 module.exports = {
-  email: 'brittany.chiang@gmail.com',
+  // Correo electrónico de contacto
+  email: 'jrgarciadr29@gmail.com',
 
+  // Redes sociales
   socialMedia: [
     {
       name: 'GitHub',
-      url: 'https://github.com/bchiang7',
-    },
-    {
-      name: 'Instagram',
-      url: 'https://www.instagram.com/bchiang7',
-    },
-    {
-      name: 'Twitter',
-      url: 'https://twitter.com/bchiang7',
+      url: 'https://github.com/rasexx',
     },
     {
       name: 'Linkedin',
-      url: 'https://www.linkedin.com/in/bchiang7',
+      url: 'https://www.linkedin.com/in/jrrg/',
     },
     {
-      name: 'Codepen',
-      url: 'https://codepen.io/bchiang7',
+      name: 'Twitter',
+      url: 'https://x.com/jsrrmon',
+    },
+    {
+      name: 'Platzi',
+      url: 'https://platzi.com/p/joseramongarciadelrisco/',
+    },
+    {
+      name: 'Microsoft',
+      url: 'https://learn.microsoft.com/es-es/users/joseramongarciadelrisco-9496/',
+    },
+    {
+      name: 'Coursera',
+      url: 'https://www.coursera.org/user/dfd1ce8a55748dbc859eae5e016ab7d5',
+    },
+    {
+      name: 'Cisco',
+      url: 'https://www.credly.com/badges/425d9cf8-d58c-464d-8c2f-8f11e58dd617/public_url',
     },
   ],
 
+  // Enlaces de navegación
   navLinks: [
     {
-      name: 'About',
+      name: 'Sobre mi',
       url: '/#about',
     },
     {
-      name: 'Experience',
+      name: 'Experiencia',
       url: '/#jobs',
     },
     {
-      name: 'Work',
+      name: 'Proyectos',
       url: '/#projects',
     },
     {
-      name: 'Contact',
+      name: 'Contacto',
       url: '/#contact',
     },
   ],
 
+  // Colores del tema
   colors: {
-    green: '#64ffda',
+    green: '#00acff',
     navy: '#0a192f',
     darkNavy: '#020c1b',
   },
 
+  // Configuración de animación de desplazamiento
   srConfig: (delay = 200, viewFactor = 0.25) => ({
     origin: 'bottom',
     distance: '20px',

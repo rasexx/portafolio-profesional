@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import { Icon } from '@components/icons';
 import { socialMedia } from '@config';
 
+// Estilos para el componente Footer
 const StyledFooter = styled.footer`
   ${({ theme }) => theme.mixins.flexCenter};
   flex-direction: column;
@@ -13,6 +14,7 @@ const StyledFooter = styled.footer`
   text-align: center;
 `;
 
+// Estilos para los enlaces sociales
 const StyledSocialLinks = styled.div`
   display: none;
 
@@ -40,6 +42,7 @@ const StyledSocialLinks = styled.div`
   }
 `;
 
+// Estilos para el crédito
 const StyledCredit = styled.div`
   color: var(--light-slate);
   font-family: var(--font-mono);
@@ -67,12 +70,14 @@ const StyledCredit = styled.div`
   }
 `;
 
+// Componente Footer
 const Footer = () => {
   const [githubInfo, setGitHubInfo] = useState({
     stars: null,
     forks: null,
   });
 
+  // Efecto para obtener información de GitHub
   useEffect(() => {
     if (process.env.NODE_ENV !== 'production') {
       return;

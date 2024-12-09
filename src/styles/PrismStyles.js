@@ -1,5 +1,6 @@
 import { css } from 'styled-components';
 
+// Definición de colores para el tema de PrismJS
 const prismColors = {
   bg: `#112340`,
   lineHighlight: `#1d2d50`,
@@ -13,12 +14,10 @@ const prismColors = {
   comment: `#8695b799`,
 };
 
-// https://www.gatsbyjs.org/packages/gatsby-remark-prismjs
-
+// Estilos de PrismJS para resaltar código
 const PrismStyles = css`
   /**
-  * Add back the container background-color, border-radius, padding, margin
-  * and overflow that we removed from <pre>.
+  * Estilos para el contenedor de resaltado de código
   */
   .gatsby-highlight {
     background-color: ${prismColors.bg};
@@ -46,23 +45,19 @@ const PrismStyles = css`
   }
 
   /**
-  * Remove the default PrismJS theme background-color, border-radius, margin,
-  * padding and overflow.
-  * 1. Make the element just wide enough to fit its content.
-  * 2. Always fill the visible space in .gatsby-highlight.
-  * 3. Adjust the position of the line numbers
+  * Ajustes para el elemento <pre> dentro del contenedor de resaltado
   */
   .gatsby-highlight pre[class*='language-'] {
     background-color: transparent;
     margin: 0;
     padding: 0;
     overflow: initial;
-    float: left; /* 1 */
-    min-width: 100%; /* 2 */
+    float: left;
+    min-width: 100%;
     padding-top: 2em;
   }
 
-  /* File names */
+  /* Estilos para los nombres de archivo */
   .gatsby-code-title {
     padding: 1em 1.5em;
     font-family: var(--font-mono);
@@ -80,7 +75,7 @@ const PrismStyles = css`
     }
   }
 
-  /* Line highlighting */
+  /* Resaltado de líneas de código */
   .gatsby-highlight-code-line {
     display: block;
     background-color: ${prismColors.lineHighlight};
@@ -91,7 +86,7 @@ const PrismStyles = css`
     margin-left: -1.35em;
   }
 
-  /* Language badges */
+  /* Insignias de lenguaje */
   .gatsby-highlight pre[class*='language-']::before {
     background: var(--lightest-navy);
     color: var(--white);
@@ -156,7 +151,7 @@ const PrismStyles = css`
     content: 'flow';
   }
 
-  /* Prism Styles */
+  /* Estilos de PrismJS para tokens */
   .token {
     display: inline;
   }

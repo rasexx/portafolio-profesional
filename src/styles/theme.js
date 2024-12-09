@@ -1,6 +1,8 @@
 import mixins from './mixins';
 
+// Definición del objeto theme que contiene las configuraciones del tema
 const theme = {
+  // BREAKPOINTS: Puntos de quiebre para diseño responsive
   bp: {
     mobileS: `max-width: 330px`,
     mobileM: `max-width: 400px`,
@@ -13,7 +15,9 @@ const theme = {
     desktopL: `max-width: 1400px`,
   },
 
+  // MIXINS: Inclusión de los mixins importados
   mixins,
 };
 
+// Exportación del objeto theme como valor por defecto
 export default theme;

@@ -9,6 +9,7 @@ import { useScrollDirection, usePrefersReducedMotion } from '@hooks';
 import { Menu } from '@components';
 import { IconLogo, IconHex } from '@components/icons';
 
+// Estilos del encabezado
 const StyledHeader = styled.header`
   ${({ theme }) => theme.mixins.flexBetween};
   position: fixed;
@@ -53,6 +54,7 @@ const StyledHeader = styled.header`
   }
 `;
 
+// Estilos de la barra de navegación
 const StyledNav = styled.nav`
   ${({ theme }) => theme.mixins.flexBetween};
   position: relative;
@@ -109,6 +111,7 @@ const StyledNav = styled.nav`
   }
 `;
 
+// Estilos de los enlaces de navegación
 const StyledLinks = styled.div`
   display: flex;
   align-items: center;
@@ -150,6 +153,7 @@ const StyledLinks = styled.div`
   }
 `;
 
+// Componente de navegación
 const Nav = ({ isHome }) => {
   const [isMounted, setIsMounted] = useState(!isHome);
   const scrollDirection = useScrollDirection('down');
@@ -207,7 +211,7 @@ const Nav = ({ isHome }) => {
 
   const ResumeLink = (
     <a className="resume-button" href="/resume.pdf" target="_blank" rel="noopener noreferrer">
-      Resume
+      Hoja de Vida
     </a>
   );
 

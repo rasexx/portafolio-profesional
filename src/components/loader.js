@@ -5,6 +5,7 @@ import anime from 'animejs';
 import styled from 'styled-components';
 import { IconLoader } from '@components/icons';
 
+// Estilos del componente Loader
 const StyledLoader = styled.div`
   ${({ theme }) => theme.mixins.flexCenter};
   position: fixed;
@@ -36,9 +37,11 @@ const StyledLoader = styled.div`
   }
 `;
 
+// Componente Loader
 const Loader = ({ finishLoading }) => {
   const [isMounted, setIsMounted] = useState(false);
 
+  // Función para animar el loader
   const animate = () => {
     const loader = anime.timeline({
       complete: () => finishLoading(),
@@ -46,20 +49,20 @@ const Loader = ({ finishLoading }) => {
 
     loader
       .add({
-        targets: '#logo path',
+        targets: '#hexagon path',
         delay: 300,
         duration: 1500,
         easing: 'easeInOutQuart',
         strokeDashoffset: [anime.setDashoffset, 0],
       })
       .add({
-        targets: '#logo #B',
+        targets: '#hexagon #B',
         duration: 700,
         easing: 'easeInOutQuart',
         opacity: 1,
       })
       .add({
-        targets: '#logo',
+        targets: '#hexagon',
         delay: 500,
         duration: 300,
         easing: 'easeInOutQuart',
@@ -75,12 +78,14 @@ const Loader = ({ finishLoading }) => {
       });
   };
 
+  // Efecto para montar el componente y ejecutar la animación
   useEffect(() => {
     const timeout = setTimeout(() => setIsMounted(true), 10);
     animate();
     return () => clearTimeout(timeout);
   }, []);
 
+  // Render del componente
   return (
     <StyledLoader className="loader" isMounted={isMounted}>
       <Helmet bodyAttributes={{ class: `hidden` }} />
@@ -92,6 +97,7 @@ const Loader = ({ finishLoading }) => {
   );
 };
 
+// PropTypes del componente Loader
 Loader.propTypes = {
   finishLoading: PropTypes.func.isRequired,
 };

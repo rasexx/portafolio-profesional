@@ -1,5 +1,6 @@
 import { css } from 'styled-components';
 
+// BOTÓN: Estilo base para botones
 const button = css`
   color: var(--green);
   background-color: transparent;
@@ -24,18 +25,21 @@ const button = css`
 `;
 
 const mixins = {
+  // FLEXCENTER: Centrado con flexbox
   flexCenter: css`
     display: flex;
     justify-content: center;
     align-items: center;
   `,
 
+  // FLEXBETWEEN: Distribución espaciada con flexbox
   flexBetween: css`
     display: flex;
     justify-content: space-between;
     align-items: center;
   `,
 
+  // LINK: Estilo para enlaces
   link: css`
     display: inline-block;
     text-decoration: none;
@@ -51,6 +55,7 @@ const mixins = {
     }
   `,
 
+  // INLINELINK: Estilo para enlaces en línea
   inlineLink: css`
     display: inline-block;
     position: relative;
@@ -86,6 +91,7 @@ const mixins = {
 
   button,
 
+  // SMALLBUTTON: Estilo para botones pequeños
   smallButton: css`
     color: var(--green);
     background-color: transparent;
@@ -109,6 +115,7 @@ const mixins = {
     }
   `,
 
+  // BIGBUTTON: Estilo para botones grandes
   bigButton: css`
     color: var(--green);
     background-color: transparent;
@@ -132,6 +139,7 @@ const mixins = {
     }
   `,
 
+  // BOXSHADOW: Efecto de sombra
   boxShadow: css`
     box-shadow: 0 10px 30px -15px var(--navy-shadow);
     transition: var(--transition);
@@ -142,6 +150,7 @@ const mixins = {
     }
   `,
 
+  // FANCYLIST: Estilo para listas con viñetas personalizadas
   fancyList: css`
     padding: 0;
     margin: 0;
@@ -160,6 +169,7 @@ const mixins = {
     }
   `,
 
+  // RESETLIST: Reinicio de estilos para listas
   resetList: css`
     list-style: none;
     padding: 0;

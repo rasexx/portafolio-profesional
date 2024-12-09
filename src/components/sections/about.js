@@ -5,6 +5,7 @@ import { srConfig } from '@config';
 import sr from '@utils/sr';
 import { usePrefersReducedMotion } from '@hooks';
 
+// Estilos para la sección "Sobre mí"
 const StyledAboutSection = styled.section`
   max-width: 900px;
 
@@ -18,6 +19,8 @@ const StyledAboutSection = styled.section`
     }
   }
 `;
+
+// Estilos para el texto de la sección "Sobre mí"
 const StyledText = styled.div`
   ul.skills-list {
     display: grid;
@@ -46,6 +49,8 @@ const StyledText = styled.div`
     }
   }
 `;
+
+// Estilos para la imagen de la sección "Sobre mí"
 const StyledPic = styled.div`
   position: relative;
   max-width: 300px;
@@ -113,10 +118,12 @@ const StyledPic = styled.div`
   }
 `;
 
+// Componente de la sección "Sobre mí"
 const About = () => {
   const revealContainer = useRef(null);
   const prefersReducedMotion = usePrefersReducedMotion();
 
+  // Efecto para revelar el contenedor con animación
   useEffect(() => {
     if (prefersReducedMotion) {
       return;
@@ -125,43 +132,64 @@ const About = () => {
     sr.reveal(revealContainer.current, srConfig());
   }, []);
 
-  const skills = ['JavaScript (ES6+)', 'TypeScript', 'React', 'Eleventy', 'Node.js', 'WordPress'];
+  // Lista de habilidades
+  const skills = [
+    'Hardware',
+    'Software',
+    'Diseño Grafico',
+    'Marketing & Publicidad',
+    'Neurociencias',
+    'Produccion Musical',
+  ];
 
   return (
     <StyledAboutSection id="about" ref={revealContainer}>
-      <h2 className="numbered-heading">About Me</h2>
+      <h2 className="numbered-heading">Sobre mi</h2>
 
       <div className="inner">
         <StyledText>
           <div>
             <p>
-              Hello! My name is Brittany and I enjoy creating things that live on the internet. My
-              interest in web development started back in 2012 when I decided to try editing custom
-              Tumblr themes — turns out hacking together a custom reblog button taught me a lot
-              about HTML &amp; CSS!
+              Soy un internauta desde que tengo uso de razón y mi conocimiento se construye en base
+              a la ciencia y la tecnología. Mi interés en la ingeniería de sistemas inició a
+              principios del año 2023, luego de una temporada trabajando en el sector del turismo y
+              la hotelería enfocado en la atención y el servicio al cliente.
             </p>
 
             <p>
-              Fast-forward to today, and I’ve had the privilege of working at{' '}
-              <a href="https://us.mullenlowe.com/">an advertising agency</a>,{' '}
-              <a href="https://starry.com/">a start-up</a>,{' '}
-              <a href="https://www.apple.com/">a huge corporation</a>, and{' '}
-              <a href="https://scout.camd.northeastern.edu/">a student-led design studio</a>. My
-              main focus these days is building accessible, inclusive products and digital
-              experiences at <a href="https://upstatement.com/">Upstatement</a> for a variety of
-              clients.
-            </p>
-
-            <p>
-              I also recently{' '}
-              <a href="https://www.newline.co/courses/build-a-spotify-connected-app">
-                launched a course
+              Mis mayores intereses desde niño, han sido la tecnología y la ciencia. Sin embargo, no
+              fue hasta el lanzamiento de los{' '}
+              <a
+                href="https://platform.openai.com/docs/deprecations"
+                target="_blank"
+                rel="noreferrer">
+                {' '}
+                primeros modelos de ChatGPT
               </a>{' '}
-              that covers everything you need to build a web app with the Spotify API using Node
-              &amp; React.
+              cuando me motive a realizar un cambio en mi rumbo profesional, luego de experimentar
+              con el prompt engineering para crear código en lenguaje{' '}
+              <a
+                href="https://es.tradingview.com/support/solutions/43000561836"
+                target="_blank"
+                rel="noreferrer">
+                PineScript®
+              </a>{' '}
+              para indicadores y estrategias de trading con criptomonedas; esto terminó por
+              convencerme de que debía realizar un cambio en mi vida, tomando lo aprendido en mis
+              labores anteriores para impulsar mi camino profesional en la industria tecnológica.
             </p>
 
-            <p>Here are a few technologies I’ve been working with recently:</p>
+            <p>
+              Mis inicios se remontan a mi infancia y adolescencia; rodeado de instrumentos
+              musicales, libros y hardware computacional; con una familia de músicos, ingenieros y
+              diseñadores, lo que sembró en mi persona una inmensa curiosidad intelectual y
+              posteriormente; llevándome a ser una persona curiosa y analítica.
+            </p>
+
+            <p>
+              En mis actividades a lo largo del tiempo, he logrado adquirir conocimientos basados
+              en:
+            </p>
           </div>
 
           <ul className="skills-list">
@@ -173,7 +201,7 @@ const About = () => {
           <div className="wrapper">
             <StaticImage
               className="img"
-              src="../../images/me.jpg"
+              src="../../images/me.png"
               width={500}
               quality={95}
               formats={['AUTO', 'WEBP', 'AVIF']}

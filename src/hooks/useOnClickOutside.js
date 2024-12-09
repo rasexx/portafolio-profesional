@@ -1,12 +1,12 @@
 import { useEffect } from 'react';
 
-// https://usehooks.com/useOnClickOutside/
-
+// Hook personalizado para detectar clics fuera de un elemento
 const useOnClickOutside = (ref, handler) => {
   useEffect(
     () => {
+      // LISTENER: Función que maneja el evento de clic
       const listener = event => {
-        // Do nothing if clicking ref's element or descendent elements
+        // VERIFICACIÓN: No hacer nada si se hace clic en el elemento de referencia o sus descendientes
         if (!ref.current || ref.current.contains(event.target)) {
           return;
         }
@@ -14,20 +14,17 @@ const useOnClickOutside = (ref, handler) => {
         handler(event);
       };
 
+      // SUSCRIPCIÓN: Agregar event listeners para mousedown y touchstart
       document.addEventListener('mousedown', listener);
       document.addEventListener('touchstart', listener);
 
+      // LIMPIEZA: Función de limpieza para remover los event listeners
       return () => {
         document.removeEventListener('mousedown', listener);
         document.removeEventListener('touchstart', listener);
       };
     },
-    // Add ref and handler to effect dependencies
-    // It's worth noting that because passed in handler is a new ...
-    // ... function on every render that will cause this effect ...
-    // ... callback/cleanup to run every render. It's not a big deal ...
-    // ... but to optimize you can wrap handler in useCallback before ...
-    // ... passing it into this hook.
+    // DEPENDENCIAS: Agregar ref y handler a las dependencias del efecto
     [ref, handler],
   );
 };

@@ -6,6 +6,7 @@ import { Helmet } from 'react-helmet';
 import styled from 'styled-components';
 import { Layout } from '@components';
 
+// Estilos para el contenedor de etiquetas
 const StyledTagsContainer = styled.main`
   max-width: 1000px;
 
@@ -45,6 +46,7 @@ const StyledTagsContainer = styled.main`
   }
 `;
 
+// Componente principal para la plantilla de etiquetas
 const TagTemplate = ({ pageContext, data, location }) => {
   const { tag } = pageContext;
   const { edges } = data.allMarkdownRemark;
@@ -102,6 +104,7 @@ const TagTemplate = ({ pageContext, data, location }) => {
 
 export default TagTemplate;
 
+// Definición de tipos para las propiedades del componente
 TagTemplate.propTypes = {
   pageContext: PropTypes.shape({
     tag: PropTypes.string.isRequired,
@@ -123,6 +126,7 @@ TagTemplate.propTypes = {
   location: PropTypes.object,
 };
 
+// Consulta GraphQL para obtener datos de las etiquetas
 export const pageQuery = graphql`
   query($tag: String!) {
     allMarkdownRemark(

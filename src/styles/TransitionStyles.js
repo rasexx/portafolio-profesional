@@ -1,9 +1,10 @@
 import { css } from 'styled-components';
 
+// URL de referencia para React Transition Group
 // https://reactcommunity.org/react-transition-group/css-transition
 
 const TransitionStyles = css`
-  /* Fade up */
+  /* FADEUP: Animación de desvanecimiento hacia arriba */
   .fadeup-enter {
     opacity: 0.01;
     transform: translateY(20px);
@@ -16,7 +17,7 @@ const TransitionStyles = css`
     transition: opacity 300ms var(--easing), transform 300ms var(--easing);
   }
 
-  /* Fade down */
+  /* FADEDOWN: Animación de desvanecimiento hacia abajo */
   .fadedown-enter {
     opacity: 0.01;
     transform: translateY(-20px);
@@ -29,7 +30,7 @@ const TransitionStyles = css`
     transition: opacity 300ms var(--easing), transform 300ms var(--easing);
   }
 
-  /* Fade */
+  /* FADE: Animación de desvanecimiento simple */
   .fade-enter {
     opacity: 0;
   }

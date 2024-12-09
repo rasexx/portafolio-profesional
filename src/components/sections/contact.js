@@ -4,6 +4,7 @@ import { srConfig, email } from '@config';
 import sr from '@utils/sr';
 import { usePrefersReducedMotion } from '@hooks';
 
+// Estilos para la sección de contacto
 const StyledContactSection = styled.section`
   max-width: 600px;
   margin: 0 auto 100px;
@@ -41,10 +42,12 @@ const StyledContactSection = styled.section`
   }
 `;
 
+// Componente de Contacto
 const Contact = () => {
   const revealContainer = useRef(null);
   const prefersReducedMotion = usePrefersReducedMotion();
 
+  // Efecto para revelar el contenedor con animación
   useEffect(() => {
     if (prefersReducedMotion) {
       return;
@@ -55,17 +58,19 @@ const Contact = () => {
 
   return (
     <StyledContactSection id="contact" ref={revealContainer}>
-      <h2 className="numbered-heading overline">What’s Next?</h2>
+      <h2 className="numbered-heading overline">¿Que sigue?</h2>
 
-      <h2 className="title">Get In Touch</h2>
+      <h2 className="title">¡Contactame!</h2>
 
       <p>
-        Although I’m not currently looking for any new opportunities, my inbox is always open.
-        Whether you have a question or just want to say hi, I’ll try my best to get back to you!
+        Suelo estar disponible a pesar de mantenerme ocupado en mis estudios y labores del dia a
+        dia, pero estoy abierto a recibir ofertas y propuestas en las que pueda colaborar ya sea
+        empleo o si tienes algún proyecto en mente. Si necesitas asesoramiento, contratarme o
+        simplemente quieres saludar o hacerme algun comentario... ¡Hazlo! ¿Que esperas?
       </p>
 
       <a className="email-link" href={`mailto:${email}`}>
-        Say Hello
+        ¡Hablemos!
       </a>
     </StyledContactSection>
   );

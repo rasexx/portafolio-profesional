@@ -6,6 +6,7 @@ import { navLinks } from '@config';
 import { KEY_CODES } from '@utils';
 import { useOnClickOutside } from '@hooks';
 
+// Estilos para el contenedor del menú
 const StyledMenu = styled.div`
   display: none;
 
@@ -14,6 +15,7 @@ const StyledMenu = styled.div`
   }
 `;
 
+// Estilos para el botón de hamburguesa
 const StyledHamburgerButton = styled.button`
   display: none;
 
@@ -85,6 +87,7 @@ const StyledHamburgerButton = styled.button`
   }
 `;
 
+// Estilos para la barra lateral del menú
 const StyledSidebar = styled.aside`
   display: none;
 
@@ -155,6 +158,7 @@ const StyledSidebar = styled.aside`
   }
 `;
 
+// Componente principal del menú
 const Menu = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
