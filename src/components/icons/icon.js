@@ -15,10 +15,13 @@ import {
   IconPlayStore,
   IconStar,
   IconTwitter,
+  IconLinktree,
 } from '@components/icons';
 
 const Icon = ({ name }) => {
   switch (name) {
+    case 'Linktree':
+      return <IconLinktree />;
     case 'AppStore':
       return <IconAppStore />;
     case 'Bookmark':

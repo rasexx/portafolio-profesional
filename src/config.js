@@ -17,20 +17,8 @@ module.exports = {
       url: 'https://x.com/jsrrmon',
     },
     {
-      name: 'Platzi',
-      url: 'https://platzi.com/p/joseramongarciadelrisco/',
-    },
-    {
-      name: 'Microsoft',
-      url: 'https://learn.microsoft.com/es-es/users/joseramongarciadelrisco-9496/',
-    },
-    {
-      name: 'Coursera',
-      url: 'https://www.coursera.org/user/dfd1ce8a55748dbc859eae5e016ab7d5',
-    },
-    {
-      name: 'Cisco',
-      url: 'https://www.credly.com/badges/425d9cf8-d58c-464d-8c2f-8f11e58dd617/public_url',
+      name: 'Linktree',
+      url: 'https://linktr.ee/jseramn',
     },
   ],
 
