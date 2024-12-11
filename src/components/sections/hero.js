@@ -66,7 +66,7 @@ const Hero = () => {
   // Elementos a renderizar
   const one = <h1>Hola, mi nombre es</h1>;
   const two = <h2 className="big-heading">Jose Ramon Garcia</h2>;
-  const three = <h3 className="big-heading">y solucióno problemas con tecnología.</h3>;
+  const three = <h3 className="big-heading">y soluciono problemas con tecnología.</h3>;
   const four = (
     <>
       <p>
