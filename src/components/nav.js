@@ -210,8 +210,12 @@ const Nav = ({ isHome }) => {
   );
 
   const ResumeLink = (
-    <a className="resume-button" href="/resume.pdf" target="_blank" rel="noopener noreferrer">
-      Hoja de Vida
+    <a
+      className="resume-button"
+      href="mailto:jrgarciadr29@gmail.com"
+      target="_blank"
+      rel="noopener noreferrer">
+      Contactame
     </a>
   );
 
