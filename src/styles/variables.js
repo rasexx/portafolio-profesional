@@ -35,7 +35,7 @@ const variables = css`
 
     // DISEÑO: Variables para elementos de diseño
     --border-radius: 4px;
-    --nav-height: 100px;
+    --nav-height: 90px;
     --nav-scroll-height: 70px;
 
     // PESTAÑAS: Dimensiones de las pestañas

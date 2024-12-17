@@ -77,7 +77,6 @@ const Footer = () => {
     forks: null,
   });
 
-  // Efecto para obtener información de GitHub
   useEffect(() => {
     if (process.env.NODE_ENV !== 'production') {
       return;
@@ -110,9 +109,12 @@ const Footer = () => {
       </StyledSocialLinks>
 
       <StyledCredit tabindex="-1">
+        <a href="https://linktr.ee/jseramn">
+          <div>Rediseño &amp; Publicación: Jose Ramon</div>
+        </a>
+        <br />
         <a href="https://github.com/bchiang7/v4">
-          <div>Designed &amp; Built by Brittany Chiang</div>
-
+          <div>Elaboración &amp; Construcción: Brittany Chiang</div>
           {githubInfo.stars && githubInfo.forks && (
             <div className="github-stats">
               <span>

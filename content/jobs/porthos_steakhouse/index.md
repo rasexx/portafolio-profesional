@@ -1,7 +1,7 @@
 ---
 date: '27 de Enero 2023'
 title: 'Mesero'
-company: 'Porthos Steakhouse & Pub'
+company: 'Porthos Steakhouse'
 location: 'Cartagena de Indias, CO'
 range: 'Ene 2023 - Abr 2023'
 url: 'https://www.porthos.com.co/'

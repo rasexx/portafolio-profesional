@@ -69,7 +69,7 @@ const Contact = () => {
         simplemente quieres saludar o hacerme algun comentario... ¡Hazlo! ¿Que esperas?
       </p>
 
-      <a className="email-link" href={`mailto:${email}`}>
+      <a className="email-link" href={email}>
         ¡Hablemos!
       </a>
     </StyledContactSection>

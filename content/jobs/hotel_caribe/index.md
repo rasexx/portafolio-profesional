@@ -1,7 +1,7 @@
 ---
 date: '7 de Octubre 2019'
 title: 'Mesero // Cajero'
-company: 'Hotel Caribe Cartagena'
+company: 'Hotel Caribe by Faranda'
 location: 'Cartagena de Indias, CO'
 range: 'Sep 2019 - Mar 2020 // Sep 2021 - Nov 2022'
 url: 'https://www.farandahotels.com/hotel/hotel-caribe-cartagena-by-faranda-grand'

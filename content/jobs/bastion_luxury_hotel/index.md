@@ -1,7 +1,7 @@
 ---
 date: '28 de Agosto 2021'
 title: 'Mesero'
-company: 'Bastion Luxury Hotel'
+company: 'Bastion Hotel'
 location: 'Cartagena de Indias, CO'
 range: 'Ago 2021'
 url: 'https://www.bastionluxuryhotel.com/'

@@ -212,7 +212,7 @@ const Nav = ({ isHome }) => {
   const ResumeLink = (
     <a
       className="resume-button"
-      href="mailto:jrgarciadr29@gmail.com"
+      href="https://walink.co/2a1051"
       target="_blank"
       rel="noopener noreferrer">
       Contactame

@@ -73,11 +73,8 @@ const Hero = () => {
         Soy estudiante de Ingeniería de Sistemas, tengo un perfil integral y multidisciplinario
         enfocado en desarrollar soluciones basadas en tecnología y las ciencias informáticas. Mi
         objetivo es combinar conocimientos técnicos con mi creatividad para resolver problemas de
-        manera eficiente y contribuir al progreso tecnológico mientras estudio en la{' '}
-        <a href="https://www.uninorte.edu.co/" target="_blank" rel="noreferrer">
-          Universidad del Norte
-        </a>
-        .
+        manera eficiente y contribuir al progreso tecnológico de las personas y las pequeñas y
+        medianas empresas.
       </p>
     </>
   );
