@@ -63,10 +63,9 @@ const Contact = () => {
       <h2 className="title">¡Contactame!</h2>
 
       <p>
-        Suelo estar disponible a pesar de mantenerme ocupado en mis estudios y labores del dia a
-        dia, pero estoy abierto a recibir ofertas y propuestas en las que pueda colaborar ya sea
-        empleo o si tienes algún proyecto en mente. Si necesitas asesoramiento, contratarme o
-        simplemente quieres saludar o hacerme algun comentario... ¡Hazlo! ¿Que esperas?
+        Estoy siempre disponible y dispuesto a colaborar en cualquier proyecto o empleo que puedas
+        tener en mente. Si necesitas asesoramiento, tienes alguna pregunta o simplemente quieres
+        saludar y compartir un comentario, ¡no dudes en hacerlo! Estoy aquí para ti. ¿Qué esperas?
       </p>
 
       <a className="email-link" href={email}>
