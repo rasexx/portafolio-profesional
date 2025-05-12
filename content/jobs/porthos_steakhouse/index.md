@@ -7,7 +7,5 @@ range: 'Ene 2023 - Abr 2023'
 url: 'https://www.porthos.com.co/'
 ---
 
-- Servicio al cliente: Brindé atención personalizada a los comensales, asegurando una experiencia de calidad.
-- Venta y sostenibilidad: Realicé la venta de alimentos y bebidas con un enfoque ambiental.
-- Logística y mise en place: Organicé y preparé loza, cristalería y cubertería, garantizando su limpieza y desinfección.
-- Apoyo operativo: Colaboré en actividades del bar y en tareas cotidianas para un servicio eficiente.
+Brinde servicio al cliente en horarios diurnos y nocturnos y atendí eventos de
+reservacion, garantizando la calidad del servicio. Brinde apoyo en la barra con la gestion del inventario y en la preparacion de bebidas alcoholicas y no alcoholicas. Todas mis tareas las realize mediante sistemas digitales y tradicionales.

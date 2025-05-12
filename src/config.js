@@ -13,8 +13,8 @@ module.exports = {
       url: 'https://www.linkedin.com/in/jrrg/',
     },
     {
-      name: 'Twitter',
-      url: 'https://x.com/jsrrmon',
+      name: 'Instagram',
+      url: 'https://www.instagram.com/jseramn/',
     },
     {
       name: 'Linktree',
@@ -44,9 +44,9 @@ module.exports = {
 
   // Colores del tema
   colors: {
-    green: '#00acff',
-    navy: '#0a192f',
-    darkNavy: '#020c1b',
+    green: '#A3B18A', // Earthy green
+    navy: '#344E41', // Deep forest green
+    darkNavy: '#1B4332', // Dark natural green
   },
 
   // Configuración de animación de desplazamiento

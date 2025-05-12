@@ -212,7 +212,7 @@ const Nav = ({ isHome }) => {
   const ResumeLink = (
     <a
       className="resume-button"
-      href="https://walink.co/2a1051"
+      href="https://wa.me/573241083976?text=Hola%20Jose%20Ramon,%20vi%20tu%20portafolio%20y%20decidi%20escribirte"
       target="_blank"
       rel="noopener noreferrer">
       Contactame

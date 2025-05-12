@@ -133,14 +133,7 @@ const About = () => {
   }, []);
 
   // Lista de habilidades
-  const skills = [
-    'Hardware',
-    'Software',
-    'Diseño Grafico',
-    'Marketing & Publicidad',
-    'Neurociencias',
-    'Produccion Musical',
-  ];
+  const skills = ['T.I.', 'Inteligencia Artificial', 'Ciberseguridad', 'Emprendimiento'];
 
   return (
     <StyledAboutSection id="about" ref={revealContainer}>
@@ -201,7 +194,7 @@ const About = () => {
           <div className="wrapper">
             <StaticImage
               className="img"
-              src="../../images/me.png"
+              src="../../images/me.jpg"
               width={500}
               quality={95}
               formats={['AUTO', 'WEBP', 'AVIF']}

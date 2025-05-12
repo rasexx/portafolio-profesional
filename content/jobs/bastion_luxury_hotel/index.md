@@ -7,7 +7,6 @@ range: 'Ago 2021'
 url: 'https://www.bastionluxuryhotel.com/'
 ---
 
-- Atención al cliente: Brindé un servicio personalizado a los comensales, asegurando una experiencia satisfactoria.
-- Venta y servicio: Presté servicio y venta de alimentos y bebidas con un enfoque ambiental.
-- Logística y organización: Realicé mise en place, limpieza, preparación y desinfección de loza, cristalería y cubertería.
-- Apoyo operativo: Colaboré en tareas cotidianas del bar para mantener la operatividad.
+Brinde servicio al cliente en horarios diurnos y nocturnos y atendí eventos de
+reservacion, garantizando la calidad del servicio. Todas mis tareas las realize mediante
+sistemas digitales y tradicionales.
